@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>casio</title>
+    <style>
+        .casio{
+            width: 300px;
+            display: block;
+            margin: 150px;
+        }
+        .casio .status{
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .casio .screen{
+            display: flex;
+            justify-content: space-between;
+            background: dimgrey;
+            padding: 20px;
+        }
+        .casio .screen input{
+            width: 60px;
+            border: none;
+            outline: none;
+            background: none;
+        }
+        .casio .keyboard{
+            display: flex;
+        }
+        .casio .keyboard .number{
+            width: 80%;
+        }
+        .casio .keyboard .number ul{
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            flex-wrap: wrap;
+        }
+        .casio .keyboard .number ul li{
+            list-style: none;
+            font-weight: bold;
+            width: 33.3%;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        .casio .keyboard .caculation{
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: center;
+            display: flex;
+        }
+        .casio .keyboard .caculation button{
+            width: 40%;
+            margin-bottom: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .casio .keyboard .caculation button:nth-child(5){
+            background: red;
+        }
+        /*.casio .status{
+            visibility: hidden;
+            opacity: 0;
+            top:-1000px;
+            position: absolute;
+        }*/
+    </style>
+</head>
+<body>
+    <div class="casio">
+        <div class="status">1</div>
+        <div class="screen">
+            <input type="text" class="pt1" placeholder="phần tử 1"/>
+            <span>?</span>
+            <input type="text" class="pt2" placeholder=" phần tử 2"/>
+            <strong>=</strong>
+            <input type="text" class="kq" placeholder="kết quả">
+        </div>
+        <div class="keyboard">
+            <div class="number">
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                </ul>
+            </div>
+            <div class="caculation">
+                <button class="cong">+</button>
+                <button class="tru">-</button>
+                <button class="nhan">*</button>
+                <button class="chia">/</button>
+                <button class="ac">AC</button>
+                <button class="bang">=</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let cong = document.querySelector('.cong');
+        let tru = document.querySelector('.tru');
+        let nhan = document.querySelector('.nhan');
+        let chia = document.querySelector('.chia');
+        let ac = document.querySelector('.ac');
+        let bang = document.querySelector('.bang');
+        let screen =document.querySelector('span');
+        let status =document.querySelector('.status');
+        let kq =document.querySelector('.kq');
+
+        let so1 =document.querySelector('ul li:nth-child(1)');
+        let so2 =document.querySelector('ul li:nth-child(2)');
+        let so3 =document.querySelector('ul li:nth-child(3)');
+        let so4 =document.querySelector('ul li:nth-child(4)');
+        let so5 =document.querySelector('ul li:nth-child(5)');
+        let so6 =document.querySelector('ul li:nth-child(6)');
+        let so7 =document.querySelector('ul li:nth-child(7)');
+        let so8 =document.querySelector('ul li:nth-child(8)');
+        let so9 =document.querySelector('ul li:nth-child(9)');
+
+        let in1 =document.querySelector('.pt1');
+        let in2 =document.querySelector('.pt2');
+
+        //so1
+        so1.addEventListener('click', function (){
+            let number = 1;
+            if(status.innerText == 1){
+                if(in1.value == ''){
+                    in1.value = number;
+                }else{
+                    in1.value = in1.value + number;
+                }
+            }else{
+                if (in2.value == ''){
+                    in2.value = number;
+                }else{
+                    in2.value = in2.value + number;
+                }
+            }
+        });
+        so2.addEventListener('click', function (){
+            let number = 2;
+            if (status.innerText == 1){
+                if (in1.value == ''){
+                    in1.value = number;
+                }else{
+                    in1.value = in1.value + number;
+                }
+            }else{
+                if (in2.value == ''){
+                    in2.value = number;
+                }else{
+                    in2.value = in2.value + number;
+                }
+            }
+        });
+        so3.addEventListener('click', function (){
+            let number = 3;
+            if (status.innerText == 1){
+                if (in1.value == ''){
+                    in1.value = number;
+                }else{
+                    in1.value = in1.value + number;
+                }
+            }else{
+                if (in2.value == ''){
+                    in2.value = number;
+                }else{
+                    in2.value = in2.value + number;
+                }
+            }
+        });
+        so4.addEventListener('click', function (){
+            let number = 4;
+            if (status.innerText == 1){
+                if (in1.value == ''){
+                    in1.value = number;
+                }else{
+                    in1.value = in1.value + number;
+                }
+            }else{
+                if (in2.value == ''){
+                    in2.value = number;
+                }else{
+                    in2.value = in2.value + number;
+                }
+            }
+        });
+        so5.addEventListener('click', function (){
+            let number = 5;
+            if (status.innerText == 1){
+                if (in1.value == ''){
+                    in1.value = number;
+                }else{
+                    in1.value = in1.value + number;
+                }
+            }else{
+                if (in2.value == ''){
+                    in2.value = number;
+                }else{
+                    in2.value = in2.value + number;
+                }
+            }
+        });
+        so6.addEventListener('click', function (){
+            let number = 6;
+            if (status.innerText == 1){
+                if (in1.value == ''){
+                    in1.value = number;
+                }else{
+                    in1.value = in1.value + number;
+                }
+            }else{
+                if (in2.value == ''){
+                    in2.value = number;
+                }else{
+                    in2.value = in2.value + number;
+                }
+            }
+        });
+        so7.addEventListener('click', function (){
+            let number = 7;
+            if (status.innerText == 1){
+                if (in1.value == ''){
+                    in1.value = number;
+                }else{
+                    in1.value = in1.value + number;
+                }
+            }else{
+                if (in2.value == ''){
+                    in2.value = number;
+                }else{
+                    in2.value = in2.value + number;
+                }
+            }
+        });
+        so8.addEventListener('click', function (){
+            let number = 8;
+            if (status.innerText == 1){
+                if (in1.value == ''){
+                    in1.value = number;
+                }else{
+                    in1.value = in1.value + number;
+                }
+            }else{
+                if (in2.value == ''){
+                    in2.value = number;
+                }else{
+                    in2.value = in2.value + number;
+                }
+            }
+        });
+        so9.addEventListener('click', function (){
+            let number = 9;
+            if (status.innerText == 1){
+                if (in1.value == ''){
+                    in1.value = number;
+                }else{
+                    in1.value = in1.value + number;
+                }
+            }else{
+                if (in2.value == ''){
+                    in2.value = number;
+                }else{
+                    in2.value = in2.value + number;
+                }
+            }
+        });
+        cong.addEventListener('click' , function (){
+            screen.innerText = '+';
+            let get_in1 = in1.value;
+
+            if(in1.value == ''){
+                status.innerText = 1;
+            }else if(status.innerText == 1){
+                status.innerText = 2;
+            }else if(status.innerText == 3){
+                in1.value = kq.value;
+                in2.value = ' ';
+                kq.value = ' ';
+                status.innerText = 2;
+            }
+
+        });
+        tru.addEventListener('click' , function (){
+            screen.innerText = '-';
+
+            if(in1.value == ' '){
+                status.innerText = 1;
+            }else if(status.innerText == 1){
+                status.innerText = 2;
+            }else if(status.innerText == 3){
+                in1.value = kq.value;
+                in2.value = ' ';
+                kq.value = ' ';
+                status.innerText = 2;
+            }
+        });
+        nhan.addEventListener('click' , function (){
+            screen.innerText = '*';
+            if(in1.value == ''){
+                status.innerText = 1;
+            }else if(status.innerText == 1){
+                status.innerText = 2;
+            }else if(status.innerText == 3){
+                in1.value = kq.value;
+                in2.value = ' ';
+                kq.value = ' ';
+                status.innerText = 2;
+            }
+        });
+        chia.addEventListener('click' , function (){
+            screen.innerText = '/';
+            if(in1.value == ''){
+                status.innerText = 1;
+            }else if(status.innerText == 1){
+                status.innerText = 2;
+            }else if(status.innerText == 3){
+                kq.value = in1.value ;
+                in2.value = ' ';
+                kq.value = ' ';
+                status.innerText = 2;
+            }
+        });
+
+        bang.addEventListener('click' ,function (){
+            let day_so1 = parseInt(in1.value);
+            let day_so2 = parseInt(in2.value);
+
+            if (screen.innerText == '+'){
+                kq.value = day_so1 + day_so2;
+            }else if (screen.innerText == '-'){
+                kq.value = day_so1 - day_so2;
+            }else if (screen.innerText == '*'){
+                kq.value = day_so1 * day_so2;
+            }else if(screen.innerText == '/') {
+                kq.value = day_so1 / day_so2;
+            }
+
+            status.innerText = 3;
+
+            if(in1.value == ''){
+                status.innerText = 1;
+            }else if(status.innerText = 2){
+                status.innerText = 3;
+            }else {
+                status.innerText = 2;
+            }
+
+        });
+
+        ac.addEventListener('click', function (){
+            in1.value = ' ';
+            in2.value = ' ';
+            kq.value = ' ';
+            screen.innerText = '?';
+            status.innerText = '1';
+        });
+
+
+    </script>
+</body>
+</html>

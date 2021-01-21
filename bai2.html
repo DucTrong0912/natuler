@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .main .box{
+            width: 100px;
+            height: 100px;
+            background: dodgerblue;
+            position: relative;
+            margin: auto;
+            animation: top_bottom 3s infinite;
+        }
+
+        @keyframes top_bottom {
+            0% {top: 0px; background: blue;}
+            25% {top: 200px; background: #84BC3F;transform: rotate(180deg);}
+            50% {top: 400px; background: orange;transform: rotate(0deg) scale(1.5,1.5);}
+            75% {top: 200px; background: #df1924;transform: rotate(0deg) scale(1.5,1.5) skew(50deg);}
+            100% {top: 0px;background: pink;}
+        }
+
+        .main:hover .box{
+            /*transform: rotate(180deg);*/
+            /*transform: scale(1.5,1.5);*/
+            /*transform: skew(50deg);*/
+
+        }
+        .img{
+            width: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        .img:before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0,0,0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            z-index: 2;
+        }
+        .img:hover:before{
+            opacity: 1;
+            visibility: visible;
+        }
+        .img img{
+            width: 100%;
+            transition: 0.3s;
+        }
+        .img:hover img{
+            transform: scale(1.5,1.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="box"></div>
+
+        <div class="img animate__animated animate__zoomIn">
+            <img src="https://imgcomfort.com/Userfiles/Upload/images/illustration-geiranger.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

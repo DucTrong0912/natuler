@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lamlai</title>
+    <style>
+        body{margin: 0px}
+        .header{
+            background: chartreuse;
+        }
+        .header h1{
+            margin: 0px;
+            padding: 20px 40px;
+            text-align: center;
+            color: red;
+        }
+        main{
+            background: burlywood;
+        }
+        .main .sidebar{
+        background: cadetblue;
+            width: 15%;
+            float: left;
+            height: 500px;
+        }
+        .main .sidebar ul{
+            margin: 0px;
+            list-style: none;
+            padding: 20px;
+
+        }
+        .main .sidebar ul li{
+            padding: 10px;
+
+        }
+        .main .sidebar ul li a{
+            text-decoration: none;
+            padding: 10px;
+            transition: 0.3s;
+            display: block;
+        }
+        .main .sidebar ul li a:hover{
+            background: yellow;
+            color: orangered;
+        }
+        .main .main_content{
+            background: lightblue;
+            width: calc(85% - 80px);
+            float: left;
+            height: calc(500px - 40px);
+            padding: 20px 40px;
+        }
+        .main .main_content section{
+            margin-bottom: 15px;
+        }
+        .main .main_content section h2{
+            margin: 0px;
+            padding: 20px;
+        }
+        .main .main_content section p{
+            margin: 0px;
+            padding: 10px;
+        }
+        .footer{
+            background: dimgrey;
+            clear: both;
+        }
+        .footer h3{
+            margin: 0px;
+            text-align: center;
+            padding: 20px;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+<main class="main">
+    <header id="header" class="header"><h1>Home Page</h1></header>
+    <aside class="sidebar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </aside>
+    <div class="main_content">
+        <section><h2>section 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur consectetur, esse eum excepturi expedita fugiat nesciunt non odit quam repudiandae, tempora, veritatis. Assumenda consequuntur facere incidunt minima praesentium totam!</p>
+        </section>
+        <section><h2>Section 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis deleniti explicabo fugiat inventore nulla quaerat qui sequi! Assumenda consequatur doloremque eum, expedita illum, iste molestias nam officiis quod suscipit veritatis!</p>
+        </section>
+        <section><h2>Section 3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolore hic impedit incidunt, maiores molestias sint voluptatem? Aliquid dolor ea esse et excepturi harum iusto laudantium minus, nihil pariatur voluptatem.</p>
+        </section>
+    </div>
+</main>
+<footer class="footer">
+    <h3>Desigh Trust2s</h3>
+</footer>
+</body>
+</html>

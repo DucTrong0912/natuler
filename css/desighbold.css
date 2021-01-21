@@ -1,0 +1,147 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    font-family: Arial;
+}
+.header{
+
+    width: 100%;
+    background: whitesmoke;
+    height: 73px;
+}
+.header .container{
+    margin: auto;
+    width: 100%;
+}
+.header .container .logo{
+    float: left;
+    width: 130px;
+    display: block;
+
+ }
+.header .container .logo img{
+    width: 100%;
+    padding: 20px 0px;
+
+}
+.header .container .menu{
+    float: left;
+    width: 50%;
+    display: block;
+    margin-left: 100px;
+}
+.header .container .menu ul{
+    list-style: none;
+    float: right;
+}
+.header .container .menu ul li{
+    float: left;
+    padding: 25px 10px;
+}
+.header .container .in .menu ul li a{
+    color: black;
+}
+.header .container .menu ul li a:hover{
+    color: blue;
+}
+.header .container .in .group-button{
+    float: right;
+    width: 30%;
+}
+.header .container .in .group-button a{
+    padding: 10px 20px;
+    display: block;
+    float: left;
+    margin-top: 13px;
+}
+.header .container .in .group-button .desigh{
+    border: 1px solid black;
+    border-radius: 15px;
+    color: springgreen;
+}
+.header .container .in .group-button .desigh:hover{
+    background: springgreen;
+    color: #FFFFFF;
+}
+.header .container .in .group-button .registration{
+    border: 1px solid black;
+    border-radius: 15px;
+}
+.header .container .in .group-button .registration:hover{
+    border: 1px solid blue;
+    color: blue;
+}
+.main {
+    float: left;
+    width: 100%;
+}
+.main .branding .content{
+    background: #43a0ff;
+    display: block;
+}
+.main .branding .content .main-content{
+    padding: 50px;
+}
+.main .branding .content .main-content h1{
+    color: #FFFFFF;
+    text-align: center;
+    padding: 30px;
+    font-size: 50px;
+}
+.main .item{
+    margin: auto;
+    width: 100%;
+}
+.main .item .main-item {
+    float: left;
+    display: block;
+}
+.main .item .main-item div{
+    display: block;
+    float: left;
+}
+.main .item .main-item h2{
+    margin: 50px 20px;
+}
+.main .item .main-item a{
+    width: calc(16.6% - 60px);
+    float: left;
+    display: block;
+    margin-left: 60px;
+    margin-bottom: 50px;
+}
+.main .item .main-item h3{
+    margin-bottom: 20px;
+    color: black;
+    text-align: center;
+}
+.footer .logo {
+    width: 20%;
+    float: left;
+    margin-right: 30px;
+}
+.footer .logo p{
+    font-family: Tahoma;
+    font-size: 18px;
+    font-style: unset;
+}
+.footer .main-footer{
+    float: left;
+}
+.footer div ul li {
+    list-style: none;
+    margin: 20px;
+}
+.footer div h5{
+    font-size: 20px;
+}
+.footer div ul li a{
+    color: black;
+}
+.footer div{
+    float: left;
+    margin: 20px;
+}

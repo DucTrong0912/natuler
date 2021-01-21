@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .casio{
+            background: #eaeaea;
+            width: 500px;
+        }
+        .casio .screen{
+            background: green;
+            padding: 10px 10px;
+            color: #FFF;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .casio .screen input{
+            width: 100%;
+            outline: none;
+            border: none;
+            height: 30px;
+            text-indent: 10px;
+        }
+
+        .casio .screen span{
+            margin: 0 15px;
+        }
+
+        .list_number ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .list_number ul li{
+            width: 33.33%;
+            height: 50px;
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .count{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .count button{
+            width: 50px;
+            height: 30px;
+            background: red;
+            color: #FFF;
+            font-size: 18px;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .status{
+            padding: 10px;
+            text-align: center;
+        }
+
+        .bang{
+            background: #0b97c4 !important;
+        }
+
+        strong{
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="casio">
+        <div class="list_number">
+            <div class="status">1</div>
+            <div class="screen">
+                <input type="text" class="so1" placeholder="Số 1" />
+                <span> ? </span>
+                <input type="text" class="so2" placeholder="Số 2" />
+                <strong> = </strong>
+                <input type="text" class="kq" placeholder="Kết quả" />
+            </div>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+            </ul>
+        </div>
+
+        <div class="count">
+            <button class="cong">+</button>
+            <button class="tru">-</button>
+            <button class="nhan">*</button>
+            <button class="chia">/</button>
+            <button class="ac">AC</button>
+            <button class="bang">=</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <!--<div id="casio">
+        <div class="click">click</div>
+        <select name="" id="click">
+            <option value="1">1</option>
+            <option value="1">2</option>
+        </select>
+    </div>-->
+    <!-- End Header -->
+
+    <script>
+        let cong = document.querySelector('.cong');
+        let tru = document.querySelector('.tru');
+        let nhan = document.querySelector('.nhan');
+        let chia = document.querySelector('.chia');
+        let ac = document.querySelector('.ac');
+        let status = document.querySelector('.status');
+        let screen = document.querySelector('span');
+        let bang = document.querySelector('.bang');
+        let kq = document.querySelector('.kq');
+
+        let so1 = document.querySelector('ul li:nth-child(1)');
+        let so2 = document.querySelector('ul li:nth-child(2)');
+        let so3 = document.querySelector('ul li:nth-child(3)');
+        let so4 = document.querySelector('ul li:nth-child(4)');
+        let so5 = document.querySelector('ul li:nth-child(5)');
+        let so6 = document.querySelector('ul li:nth-child(6)');
+        let so7 = document.querySelector('ul li:nth-child(7)');
+        let so8 = document.querySelector('ul li:nth-child(8)');
+        let so9 = document.querySelector('ul li:nth-child(9)');
+
+        let get1 = document.querySelector('.so1');
+        let get2 = document.querySelector('.so2');
+
+        //cong
+        cong.addEventListener('click', function (){
+            status.innerText = 2;
+            screen.innerText = '+';
+            if(status.innerText == 2){
+
+            }
+        });
+
+        //tru
+        tru.addEventListener('click', function (){
+            status.innerText = 2;
+            screen.innerText = '-';
+        });
+
+        //nhan
+        nhan.addEventListener('click', function (){
+            status.innerText = 2;
+            screen.innerText = '*';
+        });
+
+        //chia
+        chia.addEventListener('click', function (){
+            status.innerText = 2;
+            screen.innerText = '/';
+        });
+
+        //ac
+        ac.addEventListener('click', function (){
+            status.innerText = 1;
+            screen.innerText = '?';
+            get1.value = ' ';
+            get2.value = ' ';
+            kq.value = ' ';
+        });
+
+
+        //so1
+        so1.addEventListener('click', function (){
+            let number = 1;
+            if(status.innerText == 1){
+                if(get1.value == ''){
+                    get1.value = number;
+                }else{
+                    get1.value = get1.value + number;
+                }
+            }else{
+                if(get2.value == ''){
+                    get2.value = number;
+                }else{
+                    get2.value = get2.value + number;
+                }
+            }
+        });
+        //so2
+        so2.addEventListener('click', function (){
+            let number = 2;
+            if(status.innerText == 1){
+                if(get1.value == ''){
+                    get1.value = number;
+                }else{
+                    get1.value = get1.value + number;
+                }
+            }else{
+                if(get2.value == ''){
+                    get2.value = number;
+                }else{
+                    get2.value = get2.value + number;
+                }
+            }
+        });
+        //so3
+        so3.addEventListener('click', function (){
+            let number = 3;
+            if(status.innerText == 1){
+                if(get1.value == ''){
+                    get1.value = number;
+                }else{
+                    get1.value = get1.value + number;
+                }
+            }else{
+                if(get2.value == ''){
+                    get2.value = number;
+                }else{
+                    get2.value = get2.value + number;
+                }
+            }
+        });
+        //so4
+        so4.addEventListener('click', function (){
+            let number = 4;
+            if(status.innerText == 1){
+                if(get1.value == ''){
+                    get1.value = number;
+                }else{
+                    get1.value = get1.value + number;
+                }
+            }else{
+                if(get2.value == ''){
+                    get2.value = number;
+                }else{
+                    get2.value = get2.value + number;
+                }
+            }
+        });
+        //so5
+        so5.addEventListener('click', function (){
+            let number = 5;
+            if(status.innerText == 1){
+                if(get1.value == ''){
+                    get1.value = number;
+                }else{
+                    get1.value = get1.value + number;
+                }
+            }else{
+                if(get2.value == ''){
+                    get2.value = number;
+                }else{
+                    get2.value = get2.value + number;
+                }
+            }
+        });
+        //so6
+        so6.addEventListener('click', function (){
+            let number = 6;
+            if(status.innerText == 1){
+                if(get1.value == ''){
+                    get1.value = number;
+                }else{
+                    get1.value = get1.value + number;
+                }
+            }else{
+                if(get2.value == ''){
+                    get2.value = number;
+                }else{
+                    get2.value = get2.value + number;
+                }
+            }
+        });
+        //so7
+        so7.addEventListener('click', function (){
+            let number = 7;
+            if(status.innerText == 1){
+                if(get1.value == ''){
+                    get1.value = number;
+                }else{
+                    get1.value = get1.value + number;
+                }
+            }else{
+                if(get2.value == ''){
+                    get2.value = number;
+                }else{
+                    get2.value = get2.value + number;
+                }
+            }
+        });
+        //so8
+        so8.addEventListener('click', function (){
+            let number = 8;
+            if(status.innerText == 1){
+                if(get1.value == ''){
+                    get1.value = number;
+                }else{
+                    get1.value = get1.value + number;
+                }
+            }else{
+                if(get2.value == ''){
+                    get2.value = number;
+                }else{
+                    get2.value = get2.value + number;
+                }
+            }
+        });
+        //so9
+        so9.addEventListener('click', function (){
+            let number = 9;
+            if(status.innerText == 1){
+                if(get1.value == ''){
+                    get1.value = number;
+                }else{
+                    get1.value = get1.value + number;
+                }
+            }else{
+                if(get2.value == ''){
+                    get2.value = number;
+                }else{
+                    get2.value = get2.value + number;
+                }
+            }
+        });
+
+        //bang
+        bang.addEventListener('click', function(){
+            let so_1 = parseInt(get1.value);
+            let so_2 = parseInt(get2.value);
+
+            if(screen.innerText == '+'){
+                kq.value = so_1 + so_2;
+            }else if(screen.innerText == '-'){
+                kq.value = so_1 - so_2;
+            }else if(screen.innerText == '*'){
+                kq.value = so_1 * so_2;
+            }else{
+                kq.value = so_1 / so_2;
+            }
+
+            status.innerText = 3;
+        });
+    </script>
+
+    <script>
+        /*document.getElementById('app').innerHTML = 'hello world';
+        document.getElementById('app').style.color = 'red';
+        document.getElementById('app').style.fontSize = '30px';*/
+
+        /*document.getElementsByClassName("app_class")[0].innerHTML = "Hello World!";*/
+
+        /*document.getElementsByTagName('p')[0].innerText = 'daskjdasbjd';*/
+
+        /*var a, b, c, str1, str2;*/
+
+        /*a = 2; //chuoi a
+        b = '2'; // so b
+        c = a + b;
+
+        str1 = 'Hello ';
+        str2 = 'Trong !';*/
+
+        /*document.querySelector('#app_id').innerText = a *= 2;*/
+
+        /*if (a > 1 || b === 2) {
+            alert('Có');
+        } else {
+            alert('Không');
+        }*/
+
+        function tinhTong(){
+            alert(1 + 2);
+        }
+
+        //tinhTong(1,2);
+        /*let a = 1;
+        let b = 2;
+
+        switch('nhan') {
+            case 'cong':
+                alert(a + b);
+                break;
+            case 'tru':
+                alert(a - b);
+                break;
+            case 'nhan':
+                alert(a * b);
+                break;
+            case 'chia':
+                alert(a / b);
+                break;
+            default:
+                break;
+        }*/
+
+        /*let click = document.querySelector('#click');
+
+
+        click.addEventListener('change', function(){
+            alert('in');
+        });*/
+
+        /*click.addEventListener('mouseout', function(){
+            alert('out');
+        });*/
+
+
+    </script>
+</body>
+</html>

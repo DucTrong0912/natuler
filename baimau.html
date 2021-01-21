@@ -1,0 +1,215 @@
+    <!doctype html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bài 1</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        header{
+            background:red;
+            /*padding-top:100px;
+            padding-bottom: 50px;
+            padding-left:100px;*/
+
+            /*padding: 30px 100px;*/
+            padding: 30px; /*margin tương tự padding*/
+        }
+
+        .header h1{
+            margin: 0px;
+            font-family: 'Arial';
+            font-weight: bold;
+            font-style: italic;
+            font-size: 40px;
+            text-align: center;
+            text-transform: uppercase;  /*capitalize: Chữ cái đầu tiên in hoa - uppercase : in hoa tất cả - lowercase : in thường*/
+            color: #fff;
+        }
+
+        main{
+            background: blue;
+        }
+
+        .main .sidebar ul{
+            padding:40px 20px;
+            margin: 0px;
+            list-style: none;
+        }
+
+        .main .sidebar{
+            background: orange;
+            width: 15%;
+            height: 500px;
+            float: left;
+        }
+
+        .main .main_content{
+            background: pink;
+            width: calc(85% - 80px);
+            height: calc(500px - 80px);
+            float: right;
+            padding: 40px;
+        }
+
+        .main .main_content section h2{
+            margin: 0px;
+        }
+
+        footer{
+            background: #000;
+            clear:both;
+        }
+
+        footer p{
+            color: #FFF;
+            margin: 0px;
+            text-align: center;
+            font-family: 'Tahoma';
+            padding: 30px 0px;
+
+        }
+
+        .main .main_content section p{
+            margin: 0px;
+        }
+
+        .main .sidebar ul li{
+            margin-bottom: 15px;
+        }
+
+        .main .main_content section{
+            margin-bottom:30px;
+        }
+
+        /*.main .sidebar ul li:nth-child(2){
+            color: red;
+        }*/
+
+        /*.main .sidebar ul li:nth-child(odd){
+            color: red;
+        }*/
+
+        .main .sidebar ul li.active a{
+            color: red;
+        }
+
+        .main .sidebar ul li a{
+            text-decoration: none;
+            color: #000;
+            display: block;
+            padding: 10px;
+            transition: 0.3s;
+        }
+
+        .main .sidebar ul li a:hover{
+            background: red;
+            color: #FFF;
+        }
+
+    </style>
+</head>
+<body>
+    <!--<form action="#" method="">
+        <input type="text" name="username" value="" placeholder="Tài khoản" /> <br><br>
+        <input type="password" name="password" placeholder="Mật khẩu"/> <br> <br>
+        <label>Quốc gia : </label>
+        <select>
+            <option value="Hà Nội">Hà Nội</option>
+            <option value="Tp.HCM">Tp.HCM</option>
+        </select><br><br>
+
+        <label>Giới tính : </label>
+        <input type="radio" name="gioi_tinh" value="nam" /> Nam
+        <input type="radio" name="gioi_tinh" value="nu" /> Nữ <br><br>
+
+        <input type="checkbox" name="accept" /> Tôi đã đọc và đồng ý tất cả các điều khoản trên. <br><br>
+
+        <input type="email" name="email" placeholder="Email" /> <br><br>
+
+        <input type="number" name="tel" placeholder="tel" /> <br><br>
+
+        <textarea cols="30" rows="10">Ghi chú</textarea> <br><br>
+
+        <input type="submit" name="submit" value="Đăng nhập"/>
+        <button type="submit">Đăng nhập</button>
+    </form>-->
+    <!--<audio controls autoplay>
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+    </audio>
+
+    <button onclick="playVid()" type="button" id="play">Play Video</button>
+    <button onclick="pauseVid()" type="button">Pause Video</button><br>
+
+    <video width="320" height="240" autoplay="autoplay" controls  id="myVideo">
+        <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+    </video>
+
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+    <script>
+        var vid = document.getElementById("myVideo");
+        var play = document.getElementById("play");
+
+        function playVid() {
+            vid.play();
+        }
+
+        function pauseVid() {
+            vid.pause();
+        }
+
+        let timeout = setTimeout(function () {
+            jQuery('#play').trigger('play');
+
+        }, 5000);
+    </script>-->
+
+    <!-- Phần đầu trang -->
+    <header id="header" class="header">
+        <h1>Home Page</h1>
+    </header>
+    <!-- Kết thúc phần đầu trang -->
+
+    <main class="main">
+        <!-- Phần sidebar left -->
+        <aside class="sidebar">
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </aside>
+
+        <div class="main_content">
+            <section>
+                <h2>Section 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet culpa dignissimos expedita ipsum sed tenetur ullam vitae.
+                    Assumenda consectetur cupiditate doloribus eligendi exercitationem nam odio, recusandae. Fuga nesciunt quas tempore.</p>
+            </section>
+            <section>
+                <h2>Section 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet culpa dignissimos expedita ipsum sed tenetur ullam vitae.
+                    Assumenda consectetur cupiditate doloribus eligendi exercitationem nam odio, recusandae. Fuga nesciunt quas tempore.</p>
+            </section>
+            <section>
+                <h2>Section 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet culpa dignissimos expedita ipsum sed tenetur ullam vitae.
+                    Assumenda consectetur cupiditate doloribus eligendi exercitationem nam odio, recusandae. Fuga nesciunt quas tempore.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Design by Trust2s @2020</p>
+    </footer>
+</body>
+</html>

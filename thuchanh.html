@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        header{
+            background: red;
+            padding:30px;
+        }
+        .header h1{
+            margin:0px;
+            font-family: 'Arial';
+            font-weight: bold;
+            font-size: 100px;
+            text-align: center;
+            text-transform: initial;
+            color:white;
+        }
+        footer{
+            background: aqua;
+            text-align: center;
+            margin: 0px;
+            font-family: Tahoma;
+            padding: 5px;
+            clear: both;
+        }
+        main{
+            background: black;
+        }
+        footer p{
+            padding: 20px 20px;
+            color: darksalmon;
+            margin: 0px;
+
+        }
+        .main .sidebar {
+            background: chartreuse;
+            width: 15%;
+            float: left;
+            height: 500px;
+        }
+        .main .sidebar ul{
+            padding: 40px 20px;
+            margin: 0px;
+            list-style: none;
+
+        }
+        .main .main_content {
+            background: gold;
+            padding: 40px;
+            width: calc(85% - 80px);
+            height: calc(500px - 80px);
+            float: left;
+        }
+        .main .main_content h2{
+            margin: 0px;
+        }
+        .main .main_content section p{
+            margin: 0px;
+        }
+        .main .main_content section{
+            margin-bottom: 30px;
+        }
+        .main .sidebar ul li.active a{
+            color: white;
+        }
+        .main .sidebar ul li a{
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 20px;
+            transition: 0.3s;
+        }
+        .main .sidebar ul li a:hover {
+            background: red;
+            color: purple;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <header id="header" class="header" >
+        <h1>Home Page</h1>
+    </header>
+
+    <main class="main">
+
+    <aside class="sidebar">
+        <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li> <a href="#">About Us</a></li>
+            <li> <a href="#">Blog</a></li>
+            <li> <a href="#">Contact</a></li>
+        </ul>
+    </aside>
+        <div class="main_content">
+            <section>
+                <h2>Section 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolorem impedit, numquam obcaecati provident sunt? Adipisci culpa deleniti, dignissimos eaque, esse, in laborum magnam minus mollitia optio similique vel vitae!</p>
+            </section>
+            <section>
+                <h2>Section 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi architecto blanditiis dolores dolorum, esse minima modi necessitatibus provident sed suscipit. Aspernatur, saepe, veniam? Consequuntur culpa eveniet, ex iure quas reiciendis!</p>
+            </section>
+            <section>
+                <h2>Section 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium distinctio dolores eveniet facere fugit hic ipsum nam nemo non optio quaerat, quasi qui quidem quisquam, rem repellendus sint velit vero?</p>
+            </section>
+
+        </div>
+    </main>
+       <footer>
+           <p>Design by Trust2s</p>
+       </footer>
+</body>
+</html>

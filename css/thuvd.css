@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    width: 100%
+}
+.main .box{
+    width: 1170px;
+    margin: auto;
+}
+.main .box .in .item{
+    background: red;
+    width: calc(33.3% - 50px);
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.main .box .in{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+}
+.main .box .in .item img{
+    width: 100%;
+}
+/*.flex-container{
+    display: flex;
+    background: blue;
+}
+.flex-container div{
+    background-color: dodgerblue;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}*/

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .slt{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .slt .item{
+            width: calc(20% - 2px);
+            height: 100px;
+            background: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #FFFFFF;
+            border:1px solid #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="slt">
+        <table border="1">
+            <thead>
+                <th>Tên</th>
+                <th>Tuổi</th>
+                <th>Địa chỉ</th>
+            </thead>
+
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <p>
+        <label>Tên </label><br>
+        <input type="text" class="name" /> <br><br>
+        <label>Tuổi</label><br>
+        <input type="text" class="age" /> <br><br>
+        <label>Địa chỉ</label><br>
+        <input type="text" class="address" /> <br><br>
+        <button class="btn">Thêm</button>
+    </p>
+    <p></p>
+    <script>
+        //let arr = new Array(1,2,3,4,5,6);
+        /*let arr = [0,1,2,3,4,5,6,7,8,9]
+        let count = arr.length;
+
+        for(let i = 0; i < count; i++){
+            document.querySelector('.slt').innerHTML += "<div class='item'>"+ arr[i] +"</div>";
+        }*/
+
+        /*let arr = [];
+        arr['name'] = 'Trong';
+        arr['age'] = '22';
+        arr['address'] = 'quan 9';
+
+        console.log(arr['name']);
+        console.log(arr['age']);
+        console.log(arr['address']);
+*/
+
+        var arr = [
+            ['trong','22','quan 9'],
+            ['hao','22','quan 9'],
+            ['phuc','22','quan 9'],
+            ['nghia','22','quan 9'],
+        ];
+
+        function getData(){
+            let count = arr.length;
+
+            if(count < 1){
+                document.querySelector('tbody').innerHTML = '';
+                document.querySelector('tbody').innerHTML += '<tr><td colspan="3">Dữ liệu trống !</td></tr>';
+            }else{
+                document.querySelector('tbody').innerHTML = '';
+                for (let i = 0; i < count; i++){
+                    document.querySelector('tbody').innerHTML += '<tr><td>'+arr[i][0]+'</td><td>'+arr[i][1]+'</td><td>'+arr[i][2]+'</td></tr>';
+                }
+            }
+        }
+
+        getData();
+
+        document.querySelector('.btn').addEventListener('click', function(){
+            let name = document.querySelector('.name').value;
+            let age = document.querySelector('.age').value;
+            let address = document.querySelector('.address').value;
+
+            if(name == '' || age == '' || address == ''){
+                alert('Dữ liệu trống !');
+            }else{
+                arr.push([name, age, address]);
+                getData();
+
+                document.querySelector('.name').value = '';
+                document.querySelector('.age').value = '';
+                document.querySelector('.address').value = '';
+            }
+        });
+
+    </script>
+</body>
+</html>

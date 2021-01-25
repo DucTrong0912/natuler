@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .toggle{
+            width: 30px;
+        }
+        .toggle .span{
+            width: 100%;
+            height: 4px;
+            background: red;
+            margin-top: 6px;
+        }
+        .container{
+            max-width: 1170px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .menu{
+            position: relative;
+            z-index: 99999999999999;
+        }
+
+        header .menu .toggle{
+            cursor: pointer;
+        }
+
+        header ul{
+            position: absolute;
+            background: #00aeef;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            top: 50px;
+            right: 0;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s;
+        }
+        header ul li a{
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        header ul.active{
+            visibility: visible;
+            opacity: 1;
+            transition: 0.3s linear;
+        }
+
+        .section1 img{
+            width: 100%;
+            height: 800px;
+            object-fit: cover;
+        }
+
+        .section2{
+            height: 100vh;
+            background: blue;
+        }
+
+        .section3{
+            height: 100vh;
+            background: green;
+        }
+
+        .color{
+            background: pink !important;
+        }
+
+        .section2 img{
+            display: none;
+        }
+
+        .color img{
+            display: block;
+        }
+
+        .menu_sticky{
+            background: black;
+        }
+
+        .menu_sticky ul{
+            display: flex;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            justify-content: center;
+        }
+
+        .menu_sticky li a{
+            text-decoration: none;
+            color: #FFFFFF;
+            display: block;
+            padding: 30px 15px;
+        }
+
+        /*.menu_sticky.sticky{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 99999;
+        }*/
+
+        .menu_sticky{
+            position: sticky;
+            top: 0;
+            left: 0;
+        }
+        .totop{
+            width: 50px;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            background: gray;
+            color: #FFFFFF;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s;
+        }
+        .totop.show{
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="http://localhost/ecommerce/resources/images/banner_imaker.png" width="200px" alt="">
+            </div>
+            <div class="menu">
+                <div class="toggle">
+                    <div class="span"></div>
+                    <div class="span"></div>
+                    <div class="span"></div>
+                </div>
+
+                <ul class="">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section class="section1">
+        <!-- Swiper -->
+        <div class="swiper-container" id="slider_home">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://alvarotrigo.com/fullPage/extensions/imgs/parallax/parallax-2.jpg" alt="" width="100%" height="auto"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://alvarotrigo.com/fullPage/extensions/imgs/parallax/parallax-2.jpg" alt="" width="100%" height="auto"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://alvarotrigo.com/fullPage/extensions/imgs/parallax/parallax-2.jpg" alt="" width="100%" height="auto"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://alvarotrigo.com/fullPage/extensions/imgs/parallax/parallax-2.jpg" alt="" width="100%" height="auto"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://alvarotrigo.com/fullPage/extensions/imgs/parallax/parallax-2.jpg" alt="" width="100%" height="auto"/>
+                </div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+    <div class="menu_sticky">
+        <ul class="">
+            <li><a href="bai2.html">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+        </ul>
+    </div>
+    <section class="section2">
+        <img src="https://nshopvn.com/wp-content/uploads/2021/01/led-neon-6x12mm-cuon-5m-mau-vang-7wvl-1-600x600.jpg" alt="">
+    </section>
+    <section class="section3"></section>
+
+    <div class="totop">Top</div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.querySelector('.toggle').addEventListener('click', function(){
+            let menu_mobile = document.querySelector('.menu ul');
+            let class_active = document.querySelector('.active');
+            let width = document.querySelector('.menu ul').getBoundingClientRect().width;
+            let height = document.querySelector('.menu ul').getBoundingClientRect().height;
+            //menu_mobile.style.display = 'block';
+            //menu_mobile.classList.add('active');
+            //menu_mobile.classList.remove('active');
+            menu_mobile.classList.toggle('active');
+        });
+
+        document.addEventListener('scroll', function(){
+            let position = window.scrollY;
+            let section2 = document.querySelector('.section2');
+            let position_section2 = section2.getBoundingClientRect().top;
+            let menu_sticky = document.querySelector('.menu_sticky');
+            let position_menu_sticky = menu_sticky.getBoundingClientRect().top;
+            //let scrollTop = window.pageYOffset;
+            let scrollTop = document.documentElement.scrollTop
+
+           /* if(position >= position_section2){
+                section2.classList.add('color');
+            }else{
+                section2.classList.remove('color');
+            }*/
+
+            if(scrollTop >= 500){
+                document.querySelector('.totop').classList.add('show');
+            }else{
+                document.querySelector('.totop').classList.remove('show');
+            }
+
+
+            document.querySelector('.totop').addEventListener('click', function(){
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            });
+        });
+
+        var swiper = new Swiper('#slider_home', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            freeMode: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        //https://swiperjs.com/
+    </script>
+</body>
+</html>

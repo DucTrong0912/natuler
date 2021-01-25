@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Info</title>
+    <style>
+        .container{
+            width: 1170px;
+            margin: auto;
+        }
+        .table{
+            width: 100%;
+        }
+        .table theader{
+            background: dimgrey;
+        }
+        tr:first-child{
+            background: #9db165;
+        }
+        td:first-child{
+            background: #a9a9a9;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="container">
+        <table border="1" width="500px" align="center" class="table">
+            <thead>
+               <th>Tên</th>
+                <th>Tuổi</th>
+                <th>Giới tính</th>
+                <th>Địa chỉ</th>
+                <th>Tình trạng hôn nhân</th>
+            </thead>
+
+            <tbody align="center">
+
+            </tbody>
+        </table>
+        <p>
+            <label>Tên</label> </br>
+            <input type="text" class="Name"> </br></br>
+            <label>Tuổi</label> </br>
+            <input type="text" class="Age"> </br></br>
+            <label>Giới tính</label> </br>
+            <input type="text" class="Gender"> </br></br>
+            <label>Địa chỉ</label> </br>
+            <input type="text" class="Address"> </br></br>
+            <label>Tình trạng hôn nhân</label> </br>
+            <input type="text" class="Marital"> </br></br>
+        </p>
+        <button class="bt">Thêm</button>
+        <button class="rm">Remove</button>
+    </div>
+</main>
+<script>
+    let arr = [
+        ['Trong','22','Nam','Quan 9','Doc than'],
+        ['Nghia','23','Nam','Quan 9','Phuc Tap'],
+        ['Hao','24','Nam','Quan Tan Binh','Tim Hieu']
+    ];
+
+    function getData(){
+        let count = arr.length;
+
+        if (count < 1){
+            document.querySelector('tbody').innerHTML = '';
+        }else{
+            document.querySelector('tbody').innerHTML = '';
+            for (let i = 0;i < count;i++){
+                document.querySelector('tbody').innerHTML += '<tr align="center"><td>'+arr[i][0]+'</td><td>'+arr[i][1]+'</td><td>'+arr[i][2]+'</td><td>'+arr[i][3]+'</td><td>'+arr[i][4]+'</td></tr>';
+            }
+        }
+    }
+    getData();
+
+    document.querySelector('.bt').addEventListener('click', function (){
+        let name = document.querySelector('.Name').value;
+        let age = document.querySelector('.Age').value;
+        let gender = document.querySelector('.Gender').value;
+        let address = document.querySelector('.Address').value;
+        let marital = document.querySelector('.Marital').value;
+
+
+        if (name == '' || age == '' || gender == '' || address == '' || marital == ''){
+            alert('Dữ liệu không được để trống')
+        }else{
+            arr.push([name,age,gender,address,marital]);
+            getData();
+
+            document.querySelector('.Name').value = '';
+            document.querySelector('.Age').value = '';
+            document.querySelector('.Gender').value = '';
+            document.querySelector('.Address').value = '';
+            document.querySelector('.Marital').value = '';
+        }
+    });
+    document.querySelector('.rm').addEventListener('click', function (){
+        let name = document.querySelector('.Name').value;
+        let age = document.querySelector('.Age').value;
+        let gender = document.querySelector('.Gender').value;
+        let address = document.querySelector('.Address').value;
+        let marital = document.querySelector('.Marital').value;
+
+        document.querySelector('.Name').value = '';
+        document.querySelector('.Age').value = '';
+        document.querySelector('.Gender').value = '';
+        document.querySelector('.Address').value = '';
+        document.querySelector('.Marital').value = '';
+    });
+</script>
+</body>
+</html>
